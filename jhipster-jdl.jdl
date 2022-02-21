@@ -1,0 +1,22 @@
+ 
+entity WebsiteUser {
+  login String required
+  firstName String
+  lastName String
+  email String 
+  language String
+  profiles String
+  createdDate LocalDate
+  modifiedDate LocalDate
+  activated Boolean
+  password String required
+}
+
+relationship ManyToMany {
+  WebsiteUser{user(login)} to User
+}
+
+paginate * with pagination
+service * with serviceClass
+filter *
+

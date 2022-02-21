@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="websiteUser">
+      <h2 data-cy="websiteUserDetailsHeading"><span jhiTranslate="exerciseV2App.websiteUser.detail.title">Website User</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ websiteUser.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.login">Login</span></dt>
+        <dd>
+          <span>{{ websiteUser.login }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.firstName">First Name</span></dt>
+        <dd>
+          <span>{{ websiteUser.firstName }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.lastName">Last Name</span></dt>
+        <dd>
+          <span>{{ websiteUser.lastName }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.email">Email</span></dt>
+        <dd>
+          <span>{{ websiteUser.email }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.language">Language</span></dt>
+        <dd>
+          <span>{{ websiteUser.language }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.profiles">Profiles</span></dt>
+        <dd>
+          <span>{{ websiteUser.profiles }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ websiteUser.createdDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.modifiedDate">Modified Date</span></dt>
+        <dd>
+          <span>{{ websiteUser.modifiedDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.activated">Activated</span></dt>
+        <dd>
+          <span>{{ websiteUser.activated }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.password">Password</span></dt>
+        <dd>
+          <span>{{ websiteUser.password }}</span>
+        </dd>
+        <dt><span jhiTranslate="exerciseV2App.websiteUser.user">User</span></dt>
+        <dd>
+          <span *ngFor="let user of websiteUser.users; let last = last"> {{ user.login }}{{ last ? '' : ', ' }} </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/website-user', websiteUser.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

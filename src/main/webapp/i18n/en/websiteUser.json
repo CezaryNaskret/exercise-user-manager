@@ -1,0 +1,35 @@
+{
+  "exerciseV2App": {
+    "websiteUser": {
+      "home": {
+        "title": "Website Users",
+        "refreshListLabel": "Refresh list",
+        "searchLabel": "Search",
+        "createLabel": "Create a new Website User",
+        "createOrEditLabel": "Create or edit a Website User",
+        "notFound": "No Website Users found"
+      },
+      "created": "A new Website User is created with identifier {{ param }}",
+      "updated": "A Website User is updated with identifier {{ param }}",
+      "deleted": "A Website User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Website User {{ id }}?"
+      },
+      "detail": {
+        "title": "Website User"
+      },
+      "id": "ID",
+      "login": "Login",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "language": "Language",
+      "profiles": "Profiles",
+      "createdDate": "Created Date",
+      "modifiedDate": "Modified Date",
+      "activated": "Activated",
+      "password": "Password",
+      "user": "User"
+    }
+  }
+}

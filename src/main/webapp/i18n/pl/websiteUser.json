@@ -1,0 +1,35 @@
+{
+  "exerciseV2App": {
+    "websiteUser": {
+      "home": {
+        "title": "Website User",
+        "refreshListLabel": "Odśwież lisę",
+        "searchLabel": "Szukaj",
+        "createLabel": "Dodaj Website User",
+        "createOrEditLabel": "Dodaj lub edytuj: Website User",
+        "notFound": "Nie znaleziono Website User"
+      },
+      "created": "Utworzono nowy obiekt typu Website User z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Website User z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Website User z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Website User {{ id }}?"
+      },
+      "detail": {
+        "title": "Website User"
+      },
+      "id": "ID",
+      "login": "Login",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Email",
+      "language": "Język",
+      "profiles": "Profiles",
+      "createdDate": "Data Utworzenia",
+      "modifiedDate": "Data Modyfikacji",
+      "activated": "Aktywowany",
+      "password": "Hasło",
+      "user": "User"
+    }
+  }
+}

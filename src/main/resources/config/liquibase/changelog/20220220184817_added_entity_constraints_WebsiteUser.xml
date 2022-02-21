@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity WebsiteUser.
+    -->
+    <changeSet id="20220220184817-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="website_user_id"
+                                 baseTableName="rel_website_user__user"
+                                 constraintName="fk_rel_website_user__user__website_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="website_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="rel_website_user__user"
+                                 constraintName="fk_rel_website_user__user__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+    </changeSet>
+</databaseChangeLog>
